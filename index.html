@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRAROZ website</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            background-image: url("data:image/jpeg;base64,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");
+            height: 100vh;
+            width: 100wh;
+            border: 1px solid black;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+      .navbar{
+        width: 1200px;
+        height: 75px;
+        margin: auto;
+      }
+      .icon{
+        width: 200px;
+        float: left;
+        height: 70px;
+      }
+      .logo{
+        color: darkorange;
+        font-family: sans-serif;
+        font-size: bold;
+        float:left;
+        padding-top: 10px;
+        padding-left: 20px;
+      }
+     .menu{
+        width: 400px;
+        float: left;
+        height: 70px;
+     }
+     ul{
+        float: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+     ul li{
+        list-style: none;
+        margin-left: 62px;
+        margin-top: 20px;
+     }
+     ul li a{
+        text-decoration: none;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        transition: 0.4 s ease-in-out;
+     }
+     .search{
+        width: 300px;
+        float: left;
+        margin-left: 270px;
+     }
+     .srch{
+        font-family: 'Times New Roman', Times, serif;
+        width: 200px;
+        height: 30px;
+        background: transparent;
+        margin-top: 13px;
+        border: 1px solid darkorange;
+     }
+     .btn{
+        width: 90px;
+        height: 30px;
+        font-size: 15px;
+        background-color: darkorange;
+        color: white;
+        border: 2px solid darkorange;
+        margin-top: 13px;
+        border-bottom-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+     }
+     .btn:focus{
+        outline: none;
+     }
+     .srch:focus{
+        outline: none;
+     }
+     .content{
+        height: 550px;
+        width: 600px;
+     }
+     .text{
+        margin-left: 40px;
+        margin-top: 40px;
+        font-size: 75px;
+     }
+    .paragraph{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 20px;
+        color: white;
+        margin-left: 20px;
+    }
+    .cn{
+        width: 150px;
+        height: 40px;
+        border-radius: 10px;
+        background-color: darkorange;
+        color: black;
+        padding: 2px;
+        margin-top: 20px;
+        margin-left: 20px;
+        text-decoration: none;
+        letter-spacing: 2px;
+    }
+    .paragraph .cn a{
+        text-decoration: none;
+        pointer-events: visible;
+        transition: 0.3s ease;
+        border: none;
+    }
+    .cn:hover{
+        background-color: white;
+        border: none;
+    }
+    .form{
+        width: 250px;
+        height:380px;
+        background: linear-gradient(to top,rgba(0,0,0,0)50%,rgba(0,0,0,0)50%);
+        position: absolute;
+        top: -20px;
+        margin-top: 200px;
+        left: 870px;
+        border: 1px solid black;
+        background-color: black;
+        border-radius: 10px;
+        padding: 25px;
+    }
+    .form h2{
+        width: 250px;
+        height: 35px;
+        color: darkorange;
+        text-align: center;
+        background-color: white;
+        border-radius: 10px;
+        border: 1px solid white;
+        padding-left: 4px;
+        padding-right: 4px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        margin: auto;
+        cursor: pointer;
+    }
+    .form h2:hover{
+        cursor: pointer;
+    }
+    .form input{
+        margin-top: 20px;
+        border-end-end-radius: 2px;
+        width: 250px;
+        background-color: black;
+        color: white;
+        height: 35px;
+        /* margin: 2px; */
+    }
+    .form input:hover{
+        pointer-events: visible;
+        color: white;
+        cursor: pointer;
+    }
+    .form .buton {
+        margin-top: 20px;
+        width: 260px;
+        height: 40px;
+        border-radius: 10px;
+        background-color: darkorange;
+        padding-left: auto;
+        padding-right: auto;
+
+        cursor: pointer;
+    }
+    .form .buton a{
+        text-decoration: none;
+        color: black;
+        text-align: center;
+        font-size: 20px;
+        
+    }
+    .link{
+        color: white;
+        text-align: center;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    .form h3{
+        color: darkorange;
+        text-align: center;
+        font-size: 20px;
+        font-family: sans-serif;
+        font-weight: 200;
+        cursor: pointer;
+    }
+    .form h4{
+        font-size: 18px;
+        color: white;
+        text-align: center;
+        margin-top: 10px;
+    }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="navbar">
+            <div class="icon">
+              <h2 class="logo">PraRoz@</h2>
+            </div>
+            <div class="menu">
+            <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">SERVICE</a></li>
+            <li><a href="#">DESIGN</a></li>
+            <li><a href="#">CONTACT</a></li>
+            </ul>
+        </div>
+            <div class="search">
+              <input class="srch" type="search" name="" placeholder="Type to text">
+              <a href="#"><button class="btn">search</button></a>
+            </div>
+           </div>
+        </div>
+       <section class="content">
+        <div class="text">
+            <h1>Web Design &</h1>
+            <h1 style="color: darkorange;">Development</h1>
+            <h1>Course</h1>
+        </div>
+        <div class="paragraph">
+            <p>Web Design is a specification of the design stream.They also use HTML,CSS.WYSIWYG 
+                editing Software ,mark up validators etc.
+                to create design elements.web design is a tool of html css and js.
+            </p>
+            <button class="cn"><a href="#">JOIN US</a></button>
+        </div>
+       <div class="form">
+        <h2>Login here</h2>
+        <input type="email" name="email" placeholder="Enter Email here">
+        <br/>
+        <input type="password" name="password" placeholder="Enter password here">
+        <br/>
+        <button class="buton"><a href="#">Login</a></button>
+        <p class="link">Don't have an account?</p><br>
+        <h3 a href="#">Sign up</a></h3>
+        <h4>Login in with</h4>
+        <div class="icon">
+           <a href="#"><ion-icon name="logo.facebook"></ion-icon></a>
+           <a href="#"><ion-icon name="logo.instagram"></ion-icon></a>
+           <a href="#"><ion-icon name="logo.Twitter"></ion-icon></a>
+           <a href="#"><ion-icon name="logo.google"></ion-icon></a>
+           <a href="#"><ion-icon name="logo.linkedln"></ion-icon></a>
+        </div>
+      </div>
+    </section>
+</section>
+ <script src="https://unpkg.com/ionicons@5.4.0/dist..."></script>
+</body>
+</html>
